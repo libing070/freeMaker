@@ -1,0 +1,117 @@
+<!--pages/tabMine/mine/mine.wxml-->
+    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button> -->
+<view class="mine">
+    <view class="header">
+        <view class="avatarBox">
+            <image  class="avatar" src="/images/common/default-head.png"></image>
+        </view>
+        <view class="user">
+            <view class="nickname">波英冰</view>
+            <view class="userid">id: 123456</view>
+        </view>
+        <view class="income">
+            <view class="title">收入</view>
+            <view class="money">¥400</view>
+        </view>
+    </view>
+
+    <view class="tabs">
+        <block wx:for="{{tabs}}" wx:key="index">
+            <view class="item {{selectedTab == index ? 'sel' : ''}}" data-tab="{{index}}" catchtap="tapTab">{{item}}</view>
+        </block>
+    </view>
+
+    <view class="task-status">
+        <view class="item">
+            <view class="top">10个</view>
+            <view class="bottom">待接单</view>
+        </view>
+        <view class="item">
+            <view class="top">5个</view>
+            <view class="bottom">进行中</view>
+        </view>
+        <view class="item">
+            <view class="top">10个</view>
+            <view class="bottom">已完成</view>
+        </view>
+    </view>
+
+    <!--我的任务-->
+    <view wx:if="{{ selectedTab == 0 }}" class="task-list">
+        <block wx:if="{{1}}">
+            <view class="box" wx:for="{{10}}" catchtap="tapTaskDetail" data-code="{{index}}">
+                <view class="left">
+                    <view class="top">技能类型</view>
+                    <view class="middle">我的发布</view>
+                    <view class="bottom">北京</view>
+                </view>
+                <view class="center">
+                    <view class="top">设计设计</view>
+                    <view class="bottom">
+                        <image  class="avatar" src="/images/common/default-head.png"></image>
+                        <image  class="avatar" src="/images/common/default-head.png"></image>
+                    </view>
+                </view>
+                <view class="right">
+                    <view class="money">¥1200</view>
+                    <view class="status">进行中</view>
+                    <view class="time">2020.08.20</view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="null">
+                <image class="img" src="/images/common/icon-insert.png" catchtap="tapPublishingWorks"></image>
+                <view class="message">您当前还没有任务，只有发布作品后才可以接单哦，快来点击上方按钮发布您的第一个作品吧！</view>
+            </view>
+        </block>
+
+
+    </view>
+
+    <!--我的作品-->
+    <view class="works-list" wx:elif="{{ selectedTab == 1 }}">
+        <block wx:if="{{0}}">
+            <view class="box" wx:for="{{15}}">
+                <view class="swiper-box">
+                    <swiper class="swiper" circular indicator-active-color="#07c160" indicator-dots="{{indicatorDots}}">
+                        <block wx:for="{{swiperList}}" wx:key="index">
+                            <swiper-item>
+                                <image class="photo" src="{{item}}"  data-item="{{item}}" mode="aspectFill" catchtap="tapBanner"></image>
+                            </swiper-item>
+                        </block>
+                    </swiper>
+                </view>
+                <view class="user">
+                    <view class="top">
+                        <view class="avatarBox">
+                            <image  class="avatar" src="/images/common/default-head.png"></image>
+                        </view>
+                        <view class="message">
+                            <view class="name">波英冰</view>
+                            <view class="desc">96666666波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰666666666666666666666666666666666666666666</view>
+                        </view>
+                    </view>
+                    <view class="bottom">
+                        <view class="tags">
+                            <view class="tag">AAAA</view>
+                            <view class="tag">BBBBAAA</view>
+                            <view class="tag">cccccc</view>
+                            <view class="tag">dddddd</view>
+                        </view>
+                        <view class="money">￥180</view>
+                    </view>
+                </view>
+            </view>     
+        </block>
+        <block wx:else>
+            <view class="null">
+                <image class="img" src="/images/common/icon-insert.png"  catchtap="tapPublishingWorks"></image>
+                <view class="message">您当前还没有作品，只有发布作品后才可以接单哦，快来点击上方按钮发布您的第一个作品吧！</view>
+            </view>
+        </block>
+    </view>
+
+
+</view>
+

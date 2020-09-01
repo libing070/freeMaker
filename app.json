@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/tabHome/home/home",
+    "pages/tabMine/mine/mine",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/task/task",
+    "pages/taskDetail/taskDetail",
+    "pages/skill/skill",
+    "pages/skillDetail/skillDetail",
+    "pages/takeTaskList/takeTaskList"
+  ],
+  "tabBar": {
+    "color": "#646464",
+    "selectedColor": "#FA2878",
+    "list": [
+      {
+        "pagePath": "pages/tabHome/home/home",
+        "text": "首页",
+        "iconPath": "/images/common/home.png",
+        "selectedIconPath": "/images/common/homeSel.png"
+      },
+      {
+        "pagePath": "pages/tabMine/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/common/mine.png",
+        "selectedIconPath": "/images/common/mineSel.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "freeMakerv",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

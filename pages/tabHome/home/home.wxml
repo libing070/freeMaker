@@ -1,0 +1,46 @@
+<!--pages/tabHome/home.wxml-->
+
+<view class="filter">
+    <view class="typeBox">
+        <scroll-view class="typeTabs" scroll-x>
+            <block wx:for="{{types}}" wx:key="index">
+                <view class="type {{selectedType == index ? 'sel' : ''}}" data-i="{{index}}" catchtap="tapTypeTab">{{item}}</view>
+            </block>
+        </scroll-view>
+    </view>
+</view>
+
+<view class="home">
+    <view class="works" wx:for="{{10}}">
+        <view class="swiper-box">
+            <swiper class="swiper" circular indicator-active-color="#FA2878" indicator-dots="{{indicatorDots}}">
+                <block wx:for="{{swiperList}}" wx:key="index">
+                    <swiper-item>
+                        <image class="photo" src="{{item}}" mode="aspectFill"  data-item="{{item}}" catchtap="tapBanner"></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <view class="user">
+            <image class="head" src="/images/common/default-head.png" mode="widthFix" ></image>
+            <view class="message">
+                <view class="name">波英冰</view>
+                <view class="desc">波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰</view>
+                <view class="tags">
+                    <view class="tag">Axure</view>
+                    <view class="tag">xxxx</view>
+                    <view class="tag">Axure</view>
+                </view>
+            </view>
+            <view class="price">
+                <image class="likes" src="/images/common/icon-likes.png"></image>
+                <view class="more">more</view>
+                <view class="money">￥180</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="publish" catchtap="tapLogin">发布工作
+    <button class="phone-button" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+</view>

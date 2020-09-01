@@ -1,0 +1,35 @@
+<!--pages/takeTaskList/takeTaskList.wxml-->
+
+<view class="take-task">
+    <view class="box" wx:for="{{15}}">
+        <view class="swiper-box">
+            <swiper class="swiper" circular indicator-active-color="#07c160" indicator-dots="{{indicatorDots}}">
+                <block wx:for="{{swiperList}}" wx:key="index">
+                    <swiper-item>
+                        <image class="photo" src="{{item}}"  data-item="{{item}}" mode="aspectFill" catchtap="tapBanner"></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <view class="user">
+            <view class="top">
+                <view class="avatarBox">
+                    <image  class="avatar" src="/images/common/default-head.png"></image>
+                </view>
+                <view class="message">
+                    <view class="name">波英冰</view>
+                    <view class="desc">96666666波英冰波英冰波英冰波英冰波英冰波英冰波英冰波英冰666666666666666666666666666666666666666666</view>
+                </view>
+            </view>
+            <view class="bottom">
+                <view class="tags">
+                    <view class="tag">AAAA</view>
+                    <view class="tag">BBBBAAA</view>
+                    <view class="tag">cccccc</view>
+                    <view class="tag">dddddd</view>
+                </view>
+                <view class="money">￥180</view>
+            </view>
+        </view>
+    </view>
+</view>

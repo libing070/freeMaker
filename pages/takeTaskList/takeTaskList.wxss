@@ -1,0 +1,99 @@
+/* pages/takeTaskList/takeTaskList.wxss */
+page{
+    background-color: #F7F8FC;
+}
+.take-task{
+    position: relative;
+}
+.box{
+    background-color: white;
+    height: 250rpx;
+    margin:20rpx 0;
+    display: flex;
+    border-radius: 10rpx;
+}
+
+.swiper-box{
+    height: 280rpx;
+    width: 50%;
+    border-top-left-radius: 10rpx;
+    border-bottom-left-radius: 10rpx;
+}
+.swiper-box .swiper{
+    width: 100%;
+    height: 250rpx;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10rpx;
+}
+.swiper-box .swiper .photo{
+    width: 100%;
+    height: 250rpx;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10rpx;
+  }
+.user{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:0 5rpx;
+}
+.user .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin:10rpx 0;
+
+}
+.user .top .avatarBox{
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+.user .top .avatarBox .avatar{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.user .top .message{
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc( 100% - 80px );
+}
+.user .top .message .name{
+    font-size: 32rpx;
+}
+.user .top .message .desc{
+    color: #C8C8C8;
+    font-size: 22rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.user .bottom{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rpx;
+}
+.user .bottom .tags{
+    flex-grow: 1;
+    overflow-x:auto ;
+    overflow-y: hidden;
+}
+.user .bottom .tags .tag{
+    display: inline;
+    margin: 0 10rpx;
+    padding: 5rpx;
+    font-size: 22rpx;
+    background-color: #07c160;
+    color: white;
+}

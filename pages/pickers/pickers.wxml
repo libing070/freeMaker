@@ -1,0 +1,46 @@
+<!--pages/pickers/pickers.wxml-->
+<view wx:if="{{showing}}" class="shade" data-hide catchtap="tapCancel">
+    <view class="main" style="padding-bottom: {{safeBottom}}px;">
+        <view class="head">
+            <view class="cancel" data-hide>取消</view>
+            <view class="title">{{titles[showing]}}</view>
+            <view class="done" data-hide bindtap="tapDone">完成</view>
+        </view>
+
+         <!-- 任务类型 -->
+        <picker-view wx:if="{{showing == 'taskType'}}" class="picker" indicator-class="indicator" value="{{current}}" bindchange="taskTypeChange">
+            <picker-view-column>
+                <view class="item" wx:for="{{taskTypes}}" wx:key="index">{{item.name}}</view>
+            </picker-view-column>
+        </picker-view>
+
+        <!-- 日期 -->
+        <picker-view wx:elif="{{showing == 'date'}}" class="picker" indicator-class="indicator" value="{{current}}" bindchange="dateChange">
+            <picker-view-column>
+                <view class="item" wx:for="{{years}}" wx:key="index">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="item" wx:for="{{months}}" wx:key="index">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="item" wx:for="{{dates}}" wx:key="index">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="item" wx:for="{{hours}}" wx:key="index">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="item" wx:for="{{minutes}}" wx:key="index">{{item}}</view>
+            </picker-view-column>
+        </picker-view>
+        <!-- 省份城市 -->
+        <picker-view wx:elif="{{showing == 'region'}}" class="picker" indicator-class="indicator" value="{{current}}" bindchange="regionChange">
+            <picker-view-column>
+                <view class="item" wx:for="{{provinces}}" wx:key="index">{{item.name}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="item" wx:for="{{citys}}" wx:key="index">{{item.name}}</view>
+            </picker-view-column>
+        </picker-view>
+
+    </view>
+</view>

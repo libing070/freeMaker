@@ -1,0 +1,113 @@
+/* pages/skill/skill.wxss */
+page{
+  background-color: #F7F8FC;
+}
+.skill {
+    position: relative;
+}
+.input-container {
+    background-color: white;
+    padding-bottom: 200rpx;
+}
+.input-wrapper{
+    position: relative;
+    border-bottom: 2rpx solid #f5f5f5;
+    margin: 0 20rpx;
+}
+.input-wrapper .input-title {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    font-weight: normal;
+    color: #646464;
+    vertical-align: middle;
+}
+.input-wrapper .input {
+    height: 100rpx;
+    width: 70%;
+    float: right;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.input-wrapper .select{
+    height: 100rpx;
+    width: 70%;
+    float: right;
+    line-height: 100rpx;
+    text-align: right;
+}
+
+.input-wrapper .editor{
+    background-color: #F7F8FC;
+    width: 100%;
+    margin-bottom: 20rpx;
+    padding:10rpx;
+    font-size: 28rpx;
+    height: 400rpx;
+    display: block;
+}
+.input-wrapper .number{
+    position: absolute;
+    bottom: 20rpx;
+    right: 20rpx;
+    font-size: 28rpx;
+    color: #C8C8C8;
+}
+.input-wrapper .input .icon-camera{
+    margin-top: 15rpx;
+    height: 70rpx;
+    width: 70rpx;
+}
+.images-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    margin:0 20rpx;
+}
+.images-box .box{
+    position: relative;
+    margin:20rpx;
+    width: 135rpx;
+    height: 135rpx;
+}
+.icon-delete{
+    position: absolute;
+    right: -20rpx;
+    top: -20rpx;
+    width: 40rpx;
+    height: 40rpx;
+    z-index: 2;
+
+}
+.images-box .box .img{
+    width: 135rpx;
+    height: 135rpx;
+}
+.toolBar {
+    background-color: white;
+    box-shadow: inset 0 1px 0 0 #F0F0F0;
+    height: 100rpx;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    padding: 0 30rpx;
+    z-index: 2;
+}
+
+.toolBar .submit {
+    background: linear-gradient(90deg, #07c160, #06c100);
+    color: white;
+    font-size: 32rpx;
+    font-weight: 500;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    margin-top: 10rpx;
+}
+
+.content-active-class{
+    /* color: #07c160; */
+}

@@ -1,0 +1,323 @@
+/* pages/tabMine/mine/mine.wxss */
+page{
+  background-color: #F7F8FC;
+}
+.mine{
+    position: relative;
+    
+}
+.header{
+    margin:10rpx 0;
+    padding: 10rpx;
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+.avatarBox {
+    width: 120rpx;
+    height: 120rpx;
+    position: relative;
+}
+
+.avatarBox .avatar{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    padding-left: 20rpx;
+}
+.user .nickname{
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.user .userid{
+    font-size: 24rpx;
+}
+.income{
+    width: 120rpx;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+}
+.income .title{
+    font-size: 28rpx;
+}
+.income .money{
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.tabs {
+    background-color: white;
+    border-top: 1px solid #F0F0F0;
+    box-shadow: inset 0 -1px 0 0 #F0F0F0;
+    width: 100vw;
+    height: 44px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+.tabs .item {
+    color: #323232;
+    font-size: 15px;
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 8px;
+}
+
+.tabs .item.sel {
+    color: #FA2878;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+}
+
+.tabs .item.sel::after {
+    content: "";
+    background: linear-gradient(90deg, #ff2276, #ff46a6);
+    border-radius: 2px;
+    width: 32px;
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    position: absolute;
+    margin: auto;
+}
+
+.task-status{
+    background-color: white;
+    position: relative;
+    width: 100%;
+    height: 140rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.task-status .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-status .item .top{
+    height: 48rpx;
+    font-weight: 500;
+    font-size: 40rpx;
+    margin-bottom: 16rpx;
+    color: #323232;
+}
+.task-status .item .bottom{
+    height: 40rpx;
+    font-weight: 500;
+    font-size: 24rpx;
+    color: #646464;
+}
+.task-list{
+    position: relative;
+    padding-bottom: 10rpx;
+}
+.task-list .box{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 180rpx;
+    margin: 20rpx 0;
+    border-radius: 5rpx;
+}
+.task-list .box .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin:0 20rpx;
+}
+.task-list .box .left .top,
+.task-list .box .left .bottom{
+    border-radius: 5rpx;
+    background-color: #07c160;
+    color: white;
+    font-size: 22rpx;
+    height:45rpx;
+    text-align: center;
+    line-height: 45rpx;
+    padding: 0 10rpx;
+}
+.task-list .box .left .middle{
+    font-size: 24rpx;
+}
+
+.task-list .box .center{
+    padding:10rpx 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.task-list .box .center .top{
+    font-size: 30rpx;
+    margin-left: 20rpx;
+}
+.task-list .box .center .bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    width: 100%;
+    height: 120rpx;
+    position: relative;
+    margin-left: 20rpx;
+}
+.task-list .box .center .bottom .avatar{
+    display: block;
+    border-radius: 50%;
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 60rpx;
+}
+
+.task-list .box .right{
+    color: white;
+    border-radius: 5rpx;
+    background-color: #07c160;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:10rpx 20rpx;
+}
+.task-list .box .right .money{
+    font-size: 40rpx;
+}
+.task-list .box .right .status{
+    font-size: 30rpx;
+}
+.task-list .box .right .time{
+    font-size: 25rpx;
+}
+
+.works-list {
+    position: relative;
+}
+.works-list .box{
+    background-color: white;
+    height: 250rpx;
+    margin:20rpx 0;
+    display: flex;
+    border-radius: 10rpx;
+}
+
+.works-list .box .swiper-box{
+    height: 280rpx;
+    width: 50%;
+    border-top-left-radius: 10rpx;
+    border-bottom-left-radius: 10rpx;
+}
+.works-list .box .swiper-box .swiper{
+    width: 100%;
+    height: 250rpx;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10rpx;
+}
+.works-list .box .swiper-box .swiper .photo{
+    width: 100%;
+    height: 250rpx;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10rpx;
+  }
+  .works-list .box .user{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:0 5rpx;
+}
+.works-list .box .user .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin:10rpx 0;
+
+}
+.works-list .box .user .top .avatarBox{
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+.works-list .box .user .top .avatarBox .avatar{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.works-list .box .user .top .message{
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc( 100% - 80px );
+}
+.works-list .box .user .top .message .name{
+    font-size: 32rpx;
+}
+.works-list .box .user .top .message .desc{
+    color: #C8C8C8;
+    font-size: 22rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.works-list .box .user .bottom{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rpx;
+}
+.works-list .box .user .bottom .tags{
+    flex-grow: 1;
+    overflow-x:auto ;
+    overflow-y: hidden;
+}
+.works-list .box .user .bottom .tags .tag{
+    display: inline;
+    margin: 0 10rpx;
+    padding: 5rpx;
+    font-size: 22rpx;
+    background-color: #07c160;
+    color: white;
+}
+
+
+
+.null {
+    display: flex;
+    margin-top: 30rpx;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.null .img {
+    width: 120rpx;
+    height: 120rpx;
+    margin: 164rpx auto 10rpx;
+    display: block;
+}
+.null .message {
+    color: #646464;
+    font-size: 24rpx;
+    width: 70%;
+    margin:10rpx auto;
+}

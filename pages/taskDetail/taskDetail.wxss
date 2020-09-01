@@ -1,0 +1,155 @@
+/* pages/taskDetail/taskDetail.wxss */
+page{
+    background-color: #F7F8FC;
+}
+.task-detail{
+    position: relative;
+    margin:0;
+    padding-bottom: 50px;
+}
+.steps{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 20rpx;
+    background-color: white;
+}
+.avatarBox {
+    width: 160rpx;
+    height: 160rpx;
+    position: relative;
+    margin: 0 50rpx;
+    flex-shrink: 0;
+}
+
+.avatarBox .avatar {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.desc-line{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.desc-line .line{
+    margin-top: 10rpx;
+    height: 4rpx;
+    width: 200rpx;
+    background-color: #f5f5f5;
+}
+
+.task-name{
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    background-color: white;
+    padding:20rpx;
+}
+.commission{
+    padding-top: 20rpx;
+    background-color: white;
+    padding:0 20rpx;
+}
+.commission .money{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.commission .unit{
+    font-size: 20rpx;
+    padding-left: 5rpx;
+}
+.task-type-time{
+    padding:20rpx 20rpx 0 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20rpx;
+    border-bottom: 1px solid #f5f5f5;
+    background-color: white;
+    
+}
+.task-type-time .type{
+     background-color: #07c160;
+     color: white;
+     font-size: 24rpx;
+     line-height: 50rpx;
+     height: 50rpx;
+     text-align: center;
+     min-width: 100rpx;
+     padding:0 15rpx;
+     border-radius: 5rpx;
+}
+
+.task-describe{
+    margin-top:20rpx;
+    padding:20rpx;
+    position: relative;
+    background-color:white;
+}
+.task-describe .title{
+    font-size: 30rpx;
+    margin-bottom: 10rpx;
+}
+.task-describe  .editor{
+    background-color:white;
+    width: 100%;
+    margin-bottom: 10px;
+    padding:5px;
+    font-size: 25rpx;
+    height: auto;
+    display: block;
+}
+.toolBar{
+    background-color: white;
+    box-shadow: inset 0 1px 0 0 #F0F0F0;
+    height: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+.toolBar .buttonL {
+    color: #646464;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+}
+
+.toolBar .buttonL image {
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin: 0 auto;
+}
+.buttonR{
+    position: absolute;
+    right: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+
+}
+.buttonR .cancel-task-btn{
+    background-color: rgba(7,193,96,0.5);
+    height: 50px;
+    width: 200rpx;
+    line-height: 50px;
+    text-align: center;
+
+}
+.buttonR .pay-btn{
+    background-color: #07c160;
+    height: 50px;
+    width: 200rpx;
+    line-height: 50px;
+    text-align: center;
+}

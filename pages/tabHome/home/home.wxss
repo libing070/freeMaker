@@ -1,0 +1,182 @@
+/* pages/tabHome/home.wxss */
+page{
+    background-color: #F7F8FC;
+}
+.filter {
+    border-top: 1px solid #F7F8FC;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.filter .typeBox {
+    height: 50px;
+    margin-bottom: 4px;
+    padding: 0 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.filter .typeTabs {
+    height: 50px;
+    white-space: nowrap;
+}
+
+.filter .typeTabs .type {
+    color: #323232;
+    font-size: 15px;
+    height: 32px;
+    margin: 0 8px;
+    padding-top: 8px;
+    display: inline-block;
+}
+
+.filter .typeTabs .type.sel {
+    color: #FA2878;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+}
+
+.filter .typeTabs .type.sel::after {
+    content: "";
+    background: linear-gradient(90deg, #ff2276, #ff46a6);
+    border-radius: 2px;
+    width: 32px;
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+}
+
+.home{
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 3px;
+}
+.works{
+    position: relative;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: white;
+}
+.swiper-box{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.swiper-box .swiper{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.swiper-box .swiper .photo{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.user{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.user .head{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    flex-shrink: 0;
+}
+.user .message{
+    position: relative;
+    flex-shrink: 3;
+    display: flex;
+    flex-direction: column;
+}
+.user .message .name{
+    color: #323232;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.user .message .desc{
+    color: #C8C8C8;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top:4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break: break-all;
+}
+.user .message .tags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.user .message .tags .tag{
+    font-size: 10px;
+    border: 1px solid #F1F3FA;
+    border-radius: 100px;
+    margin-top: 6px;
+    padding: 0 10px;
+    background-color: #F1F3FA;
+    box-sizing: border-box;
+    margin-left: 12px;
+}
+.user .price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user .price .likes{
+    width: 15px;
+    height: 15px;
+}
+.user .price .more{
+    color: #323232;
+    font-size: 14px;
+    margin-top: 8px;
+}
+.user .price .money{
+    font-weight: 500;
+    color: #323232;
+    font-size: 18px;
+}
+
+.publish{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 500;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 80px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+}
+.publish .phone-button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}

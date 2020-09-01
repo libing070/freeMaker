@@ -1,0 +1,78 @@
+<!--pages/task/task.wxml-->
+<wxs module="fn">
+	module.exports = {
+		formatCurrrArea: function(currrArea) {
+			return currrArea.length!=0 ? (currrArea[0]+','+currrArea[1]+","+currrArea[2]): ''
+		}
+	}
+</wxs>
+
+<view class="task">
+    <view class="input-container">
+        <view class="input-wrapper">
+            <text class="input-title">任务名称*</text>
+            <input class="input" placeholder-style='text-align:right' maxlength="100" placeholder="请输入" bindinput="bindTaskNameInput" value="{{taskName}}" placeholder-style="color: #C8C8C8"/>
+        </view>
+        <view class="input-wrapper">
+            <text class="input-title">任务类型</text>
+            <text class="select" catchtap="tapTaskTypeCell"  data-type="type" >{{taskType}}</text>
+        </view>
+        <view class="input-wrapper">
+            <text class="input-title">期望交付时间</text>
+            <text class="select" catchtap="tapDateCell"  data-type="date" >{{currentDateStr}}</text>
+        </view>
+        <view class="input-wrapper">
+            <text class="input-title">预算(RMB)</text>
+            <input class="input" placeholder-style='text-align:right' maxlength="8" placeholder="请输入" bindinput="bindPriceInput" value="{{price}}" placeholder-style="color: #C8C8C8"/>
+        </view>
+        <view class="input-wrapper">
+            <text class="input-title">省份城市</text>
+            <text class="select" data-type="area" catchtap="tapRegionCell">{{fn.formatCurrrArea(currrArea)}}</text>
+        </view>
+        <view class="input-wrapper" style="padding-right:10px">
+            <text class="input-title">任务描述</text>
+            <editor id="editor" class="editor" placeholder="请输入"  bindinput="bindEditorInput" bindready="onEditorReady"> </editor>
+
+            <view class="number">{{total}}/300</view>
+        </view>
+        <view class="input-wrapper" >
+            <text class="input-title">接单人ID(非必填)</text>
+            <input style="width:55%" class="input" placeholder-style='text-align:right' maxlength="100" placeholder="请输入" bindinput="bindFreeMakerIDInput" value="{{freeMakerID}}" placeholder-style="color: #C8C8C8"/>
+        </view>
+    </view>  
+    <view class="toolBar" style="padding-bottom: {{safeBottom}}px;">
+	    <view class="submit" catchtap="tapSubmit">提交</view>
+    </view>
+</view>
+<!-- <pickers show="{{pickerShow}}"></pickers> -->
+<van-popup show="{{ showing }}" position="bottom" custom-style="height: 50%;"bind:close="tapCancel">
+    <van-picker  wx:if="{{currPicker == 'type'}}"
+    show-toolbar
+    title="任务类型"
+    columns="{{ typeList }}"
+    bind:cancel="tapCancel"
+    bind:confirm="typeTapDone"
+    />
+
+    <van-datetime-picker wx:elif="{{currPicker == 'date'}}"
+    title="期望交付时间"
+    type="datetime"
+    value="{{ currentDate }}"
+    min-date="{{ minDate }}"
+    max-date="{{ maxDate }}"
+    formatter="{{ formatter }}"
+    bind:confirm="dateTapDone"
+    bind:cancel="tapCancel"
+    />
+
+    <van-area  wx:elif="{{currPicker == 'area'}}"
+    bind:confirm="areaTapDone"
+    bind:cancel="tapCancel"
+    area-list="{{ areaList }}"
+    value="{{currrAreaCode}}"
+    title="省/市/区"
+    />
+</van-popup>
+
+
+

@@ -1,0 +1,8 @@
+/* pages/skillDetail/skillDetail.wxss */
+
+page{
+  background-color: #F7F8FC;
+}
+.skill-detail {
+    position: relative;
+}

@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "发布任务",
+    "backgroundColor": "#F7F8FC",
+    "usingComponents": {
+        "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+        "van-area": "/miniprogram_npm/@vant/weapp/area/index",
+        "van-picker": "/miniprogram_npm/@vant/weapp/picker/index",
+        "van-datetime-picker": "/miniprogram_npm/@vant/weapp/datetime-picker/index",
+        "van-field": "/miniprogram_npm/@vant/weapp/field/index"
+    }
+}

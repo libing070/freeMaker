@@ -1,0 +1,48 @@
+<!--pages/taskDetail/taskDetail.wxml-->
+<view class="task-detail">
+    <view class="steps">
+        <view class="avatarBox">
+            <image  class="avatar" src="/images/common/default-head.png"></image>
+        </view>
+        <view class="desc-line">
+            <view class="desc">待接单</view>
+            <view class="line"></view>
+        </view>
+         <view class="avatarBox">
+            <image  class="avatar" src="/images/common/default-head.png"></image>
+        </view>
+    </view>
+
+    <van-steps steps="{{ steps }}" active="{{ active }}"  active-icon="success" active-color="#07c160" />
+
+    <view class="task-name">任务名称</view>
+
+    <view class="commission">
+        <text class="money">¥400</text>
+        <text class="unit">RMB</text>
+    </view>
+
+    <view class="task-type-time">
+        <view class="type">设计设计设计</view>
+        <view class="time">期望2020-09-09交付</view>
+    </view>
+
+    <view class="task-describe">
+        <view class="title">任务描述</view>
+        <editor id="editor" class="editor" placeholder="请输入" read-only="true"  bindready="onEditorReady"> </editor>
+
+    </view>
+
+</view>
+<!-- 工具栏 -->
+<view class="toolBar" style="padding-bottom: {{safeBottom}}px;">
+    <view class="buttonL" catchtap="tapEdit" data-code="2020082012987443">
+        <image src="/images/common/icon-edit.png"></image>
+        编辑
+    </view>
+    <view class="buttonR">
+        <view class="cancel-task-btn">取消任务</view>
+        <view class="pay-btn">支付</view>
+    </view>
+
+</view>

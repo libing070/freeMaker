@@ -1,0 +1,47 @@
+<!--pages/skill/skill.wxml-->
+<view class="skill">
+    <view class="input-container">
+        <view class="input-wrapper">
+            <text class="input-title">技能名称*</text>
+            <input class="input" placeholder-style='text-align:right' maxlength="100" placeholder="请输入" bindinput="bindSkillNameInput" value="{{skillName}}" placeholder-style="color: #C8C8C8"/>
+        </view>
+        <view class="input-wrapper">
+            <text class="input-title">技能类型</text>
+            <text class="select" catchtap="tapSkillTypeCell"  data-type="type" >{{skillType}}</text>
+        </view>
+        <view class="input-wrapper">
+            <text class="input-title">时薪(RMB)</text>
+            <input class="input" placeholder-style='text-align:right' maxlength="8" placeholder="请输入" bindinput="bindPriceInput" value="{{price}}" placeholder-style="color: #C8C8C8"/>
+        </view>
+        <view class="input-wrapper" >
+            <text class="input-title">技能描述</text>
+            <editor id="editor" class="editor" placeholder="请输入"  bindinput="bindEditorInput" bindready="onEditorReady"> </editor>
+            <view class="number">{{total}}/300</view>
+        </view>
+        <view class="input-wrapper">
+            <text class="input-title">作品上传(最多上传8张哦)</text>
+            <view class="input" style="width:30%">
+                <image src="/images/common/icon-camera.png" class="icon-camera" catchtap="tapUpload" />
+            </view>
+        </view>
+        <view class="images-box">
+            <view class="box" wx:for="{{imagesList}}" wx:key="index">
+                <image src="/images/common/icon-delete.png" class="icon-delete" data-index="{{index}}" catchtap="deletePhotos"></image>
+                <image src="{{item}}" class="img" mode="aspectFill"  data-item="{{item}}"  catchtap="tapBanner"/>
+            </view>
+        </view>
+    </view>  
+    <view class="toolBar" style="padding-bottom: {{safeBottom}}px;">
+	    <view class="submit" catchtap="tapSubmit">提交</view>
+    </view>
+</view>
+<van-popup show="{{ showing }}" position="top" custom-style=""bind:close="tapCancel">
+    <van-tree-select
+    class="content-active-class"
+    items="{{ skillList }}"
+    main-active-index="{{ mainActiveIndex }}"
+    active-id="{{ activeId }}"
+    bind:click-nav="onClickNav"
+    bind:click-item="onClickItem"
+    />
+</van-popup>

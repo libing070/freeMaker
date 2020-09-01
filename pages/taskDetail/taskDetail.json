@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "任务详情",
+    "usingComponents": {
+      "van-steps": "/miniprogram_npm/@vant/weapp/steps/index"
+    }
+}

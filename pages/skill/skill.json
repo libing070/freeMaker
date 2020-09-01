@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "发布技能",
+    "usingComponents": {
+        "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+        "van-tree-select": "/miniprogram_npm/@vant/weapp/tree-select/index"
+    }
+}
